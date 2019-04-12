@@ -8,27 +8,51 @@
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
 
+let tyrannosaurus = {
+  "name": "Trannosaurus",
+  "diet": "carnivorous",
+  "weight": "7000kg",
+  "length": "12m",
+  "period": "Late Cretaceious"
+}
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 
+let stegosaurus = {
+  "name": "Stegosaurus",
+  "diet": "herbivorous",
+  "weight": "2000kg",
+  "length": "9m",
+  "period": "Late Jurassic"
+}
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
 
+let velociraptor = {
+  "name": "Velociraptor",
+  "diet": "carnivorous",
+  "weight": "15kg",
+  "length": "1.8m",
+  "period": "Late Cretaceious"
+}
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log();
+
+console.log(tyrannosaurus.weigh);
 
 // What was the diet of a velociraptor?
-console.log();
+console.log(velociraptor.diet);
 
 // How long was a stegosaurus?
-console.log();
+console.log(stegosaurus.length);
 
 // What time period did tyrannosaurus live in?
-console.log();
+console.log(tyrannosaurus.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+tyrannosaurus.speak = function() {
+  return "RAWERSRARARWERSARARARRRR!";
+}
 
 
 // ==== Arrays ====
@@ -52,6 +76,12 @@ Once you have the new array created, sort the universities alphabetically and lo
 const universities = [];
 console.log(universities)
 
+const universities = [];
+for (let i = 0; i < graduates.length; i++) {
+  universities.push(graduates[i].universities);
+}
+console.log(universities.sort());
+
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
 The resulting contact information should have a space between the first name and the email information like this: 
@@ -65,6 +95,17 @@ console.log(contactInfo);
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
 console.log(uni);
+
+const uni = [];
+for (let i = 0; i < uni.university; i++) {
+  if(uni[i] === "university") {
+    uni.push("university"[i]);
+  }
+  else {
+    // do nothing
+  }
+}
+console.log(uni.university);
 
 
 // ==== ADVANCED Array Methods ====
@@ -91,6 +132,12 @@ The zoo wants to display both the scientific name and the animal name in front o
 const animalNames = [];
 console.log(animalNames);
 
+
+const animalNames = [];
+let fullName = zooAnimals.forEach(function(i){
+  fullName.push(i.animal_name + " " + i.scientific_name);
+});
+console.log(fullName);
 /* Request 2: .map()    
 
 The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
@@ -98,6 +145,11 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 */
 
 const lowerCase = [];
+console.log(lowerCase); 
+
+const lowerCase = zooAnimals.map((animal) => {
+  return animal.animal_name.toLowerCase();
+});
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
@@ -108,6 +160,11 @@ The zoos are concenred about animals with a lower population count. Find out whi
 const largerPopulation = [];
 console.log(largerPopulation);
 
+const largerPopulation = animal.filter((population) => {
+  return largerPopulation.population < "5";
+});
+console.log(largerPopulation);
+
 /* Request 4: .reduce() 
 
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
@@ -116,6 +173,10 @@ The zoos need to know their total animal population across the United States.  F
 const populationTotal = 0;
 console.log(populationTotal);
 
+const populationTotal = animals.reduce((populationTotal, populationAmount) => {
+  return populationTotal + populationAmount.population;
+}, 0);
+console.log(populationTotal);
 
 /* 
 
