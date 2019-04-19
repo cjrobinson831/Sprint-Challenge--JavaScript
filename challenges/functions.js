@@ -23,15 +23,23 @@ function consume(param1,param2, callback) {
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 function consume(x, y, cb) {
-  // multiplyNums multiplies two numbers and passes the result to the callback.
    cb(x, y);
 }
 
-function consume(x,y, cb) {
-  // multiplyNums multiplies two numbers and passes the result to the callback.
-   add(x+y);
+const add = function(x, y) {
+  return x + y;
 }
 
+consume(2,2,add); 
+
+
+function consume(x, y, cb) {
+   cb(x, y);
+}
+
+const multiply = function(x, y) {
+  return x * y;
+}
 
 
 //const greeting = function(firstName, lastName){
