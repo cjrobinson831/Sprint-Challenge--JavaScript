@@ -181,7 +181,7 @@ Find out which animals have a population less than 5.
 */
 
 const largerPopulation = zooAnimals.filter((object) => {
-  return object.population < "5";
+  return object.population < 5;
 });
 console.log(largerPopulation);
 
