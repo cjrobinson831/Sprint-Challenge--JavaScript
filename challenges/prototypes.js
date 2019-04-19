@@ -5,17 +5,21 @@
  Follow the steps in order to accomplish this challenge.*/
 
 /* == Step 1: Base Constructor ==
-  Create a constructor function named CuboidMaker that accepts properties for length, width, and height
+  Create a constructor function named CuboidMaker that accepts properties for length, 
+  dth, and height
 */
 
-function CuboidMaker {
-  constructor(properties){
-    this.length = properties.length;
-    this.width = properties.width;
-    this.height = properties.height;
-}
-}
+//function CuboidMaker{
+  //constructor(properties){
+   // this.length = properties.length;
+    //this.width = properties.width;
+    //this.height = properties.height;
+//}
+  //}
+    
 
+
+console.log(CuboidMaker.length)
 /* == Step 2: Volume Method ==
   Create a method using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
   
@@ -46,12 +50,13 @@ CuboidMaker.prototype.surfaceArea = function () {
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid.   
 */
 
-CuboidMaker.prototype = new CuboidMaker({
+CuboidMaker = new CuboidMaker({
   properties: {
     length: 4,
     width: 5,
     height: 5,
 });
+ 
 
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
