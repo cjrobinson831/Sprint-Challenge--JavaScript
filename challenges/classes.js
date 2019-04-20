@@ -3,6 +3,32 @@
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 
 
+class cuboidMaker {
+  constructor(options){
+   this.width = options.width;
+   this.height = options.height;
+   this.length = options.length;
+ };
+
+
+volume(){
+ return this.width * this.height * this.length;
+};
+
+surfaceArea(){
+ return 2*(this.width*this.length+this.length*this.height+this.height*this.width)
+};
+};
+
+const Cuboid = new cuboidMaker({
+ width:5,
+ height:5,
+ length:4,
+})
+
+console.log(cuboid.volume()); // 100
+console.log(cuboid.surfaceArea()); // 130
+
 
 
 
